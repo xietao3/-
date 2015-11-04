@@ -7,17 +7,19 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>void uncaughtExceptionHandler(NSException *exception) {
-    NSLog(@"CRASH: %@", exception);
-    NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
-    // Internal error reporting
+	<string>- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    self = [[[NSBundle mainBundle] loadNibNamed:@"FDSplashView" owner:nil options:nil] objectAtIndex:0];
+    [self setFrame:frame];
+    return self;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6974655A-B547-45D4-8886-FA23F40E191F</string>
+	<string>8A73BEE3-D59C-4519-8EE3-E9EEFA850E11</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>uncaughtExceptionHandler</string>
+	<string>InitFromXib</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

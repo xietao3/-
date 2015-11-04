@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    NSMutableAttributedString *contentString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"您有%d张可用优惠券",5]];
+    [contentString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue-Regular" size:15] range:NSMakeRange(2, 1)];
+    [contentString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"3c8c1e"] range:NSMakeRange(2, 1)];
+    self.contentLabel.attributedText = contentString;
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>160A2AB6-E758-4CEE-9C2D-FD1E3E6E8CE7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSMutableAttributedString</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
