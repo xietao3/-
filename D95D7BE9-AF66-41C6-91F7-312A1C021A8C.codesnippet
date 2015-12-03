@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)awakeFromNib {
+    
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+}
+
++ (CGFloat)heightForCellInTableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath dataSource:(id)dataSource {
+    return &lt;#expression#&gt;;
+}
+
++ (instancetype)cellForTableView:(UITableView *)tableView{
+    static NSString *cellIdentifier = &lt;#(NSString *)#&gt;;
+    &lt;#__unsafe_unretained Class aClass#&gt; *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        NSArray *xibs = [[NSBundle mainBundle]loadNibNamed:&lt;#(NSString *)#&gt; owner:self options:nil];
+        cell = (&lt;#__unsafe_unretained Class aClass#&gt; *)[xibs objectAtIndex:&lt;#expression#&gt;];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    return cell;
+}
+
+- (void)displayCellByDataSources:(id)dataSources rowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D95D7BE9-AF66-41C6-91F7-312A1C021A8C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>customCell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
