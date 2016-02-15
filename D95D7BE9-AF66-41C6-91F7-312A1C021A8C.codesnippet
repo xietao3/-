@@ -25,7 +25,7 @@
     static NSString *cellIdentifier = &lt;#(NSString *)#&gt;;
     &lt;#__unsafe_unretained Class aClass#&gt; *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        NSArray *xibs = [[NSBundle mainBundle]loadNibNamed:&lt;#(NSString *)#&gt; owner:self options:nil];
+        NSArray *xibs = [[NSBundle mainBundle] loadNibNamed:&lt;#(NSString *)#&gt; owner:self options:nil];
         cell = (&lt;#__unsafe_unretained Class aClass#&gt; *)[xibs objectAtIndex:&lt;#expression#&gt;];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }

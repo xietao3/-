@@ -7,12 +7,14 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>   static NSString *cellIdentifier = &lt;#(NSString *)#&gt;;
+	<string>    static NSString *cellIdentifier = @"cellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
-    }</string>
+    }
+    cell.textLabel.text = @"";
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B73957E7-5351-4829-A202-E9C0E8BD2D7C</string>
 	<key>IDECodeSnippetLanguage</key>

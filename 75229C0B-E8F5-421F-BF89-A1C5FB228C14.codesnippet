@@ -4,19 +4,16 @@
 <dict>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>UIStoryboard *storyboard = [UIStoryboard storyboardWithName:&lt;#(NSString *)#&gt; bundle:nil];
-    UIViewController *goVC = [storyboard instantiateViewControllerWithIdentifier:&lt;#(NSString *)#&gt;];
-    [self.navigationController pushViewController:goVC animated:YES];
-</string>
+	<string>@property (nonatomic, strong) LDUserViewModel *viewModel;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>2CE365D3-E134-4BFA-821A-73DE1438BACE</string>
+	<string>75229C0B-E8F5-421F-BF89-A1C5FB228C14</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>push2storyboard</string>
+	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

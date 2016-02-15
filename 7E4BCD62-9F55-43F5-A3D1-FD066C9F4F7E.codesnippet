@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - ViewModel
+- (void)bindViewModel {
+    [super bindViewModel];
+    WS(weakSelf);
+    self.viewModel = [[LDAnswerViewModel alloc] init];
+    
+    [_kvoController observe:self.viewModel keyPath:@"questionList" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld block:^(id observer, id object, NSDictionary *change) {
+        [weakSelf hideHUD];
+
+
+    }];
+    
+    [_kvoController observe:self.viewModel keyPath:@"failureMessage" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld block:^(id observer, id object, NSDictionary *change) {
+        [weakSelf hideHUD];
+        NSString *message = (NSString *)change[NSKeyValueChangeNewKey];
+        LogRed(@"%@",message);
+    }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7E4BCD62-9F55-43F5-A3D1-FD066C9F4F7E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BindViewModel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
