@@ -22,11 +22,25 @@
 }
 
 + (instancetype)cellForTableView:(UITableView *)tableView{
-    static NSString *cellIdentifier = &lt;#(NSString *)#&gt;;
+    static NSString *cellIdentifier = @"";
+    cellIdentifier = [NSString stringWithFormat:@"%@",NSStringFromClass([self class])];
+    
+    NSString *filePath = [NSString stringWithFormat:@"%s",__FILE__];
+    NSArray *fileArray = [(NSString *)[(NSArray *)[filePath componentsSeparatedByString:@"/"] lastObject] componentsSeparatedByString:@"."];
+    NSString *fileName = [fileArray firstObject];
+    
+    
     &lt;#__unsafe_unretained Class aClass#&gt; *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        NSArray *xibs = [[NSBundle mainBundle] loadNibNamed:&lt;#(NSString *)#&gt; owner:self options:nil];
-        cell = (&lt;#__unsafe_unretained Class aClass#&gt; *)[xibs objectAtIndex:&lt;#expression#&gt;];
+        NSArray *xibs = [[NSBundle mainBundle] loadNibNamed:fileName owner:self options:nil];
+        NSUInteger index = 0;
+        for (id obj in xibs) {
+            if ([NSStringFromClass([obj class]) isEqualToString:NSStringFromClass([self class])]) {
+                index = [xibs indexOfObject:obj];
+                break;
+            }
+        }
+        cell = [xibs objectAtIndex:index];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
