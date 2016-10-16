@@ -14,13 +14,20 @@
     self.viewModel = [[LDAnswerViewModel alloc] init];
     
     [_kvoController observe:self.viewModel keyPath:@"questionList" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld block:^(id observer, id object, NSDictionary *change) {
-        [weakSelf hideHUD];
+        [weakSelf stopLoading];
 
 
     }];
     
+    [_kvoController observe:self.viewModel keyPath:@"alertMessage" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld block:^(id observer, id object, NSDictionary *change) {
+        [weakSelf stopLoading];
+        NSString *message = (NSString *)change[NSKeyValueChangeNewKey];
+        [FDUtility alertMessage:message];
+    }];
+
+    
     [_kvoController observe:self.viewModel keyPath:@"failureMessage" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld block:^(id observer, id object, NSDictionary *change) {
-        [weakSelf hideHUD];
+        [weakSelf stopLoading];
         NSString *message = (NSString *)change[NSKeyValueChangeNewKey];
         LogRed(@"%@",message);
     }];
