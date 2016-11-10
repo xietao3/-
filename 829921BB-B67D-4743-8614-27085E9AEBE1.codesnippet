@@ -7,14 +7,13 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (instancetype)shareInstance 
-{
-    static WXPayClient *sharedClient = nil;
+	<string>+ (instancetype)shareInstance {
+    static NetworkAuthManager *shareInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&amp;onceToken, ^{
-        sharedClient = [[WXPayClient alloc] init];
+        shareInstance = [[NetworkAuthManager alloc] init];
     });
-    return sharedClient;
+    return shareInstance;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>829921BB-B67D-4743-8614-27085E9AEBE1</string>
