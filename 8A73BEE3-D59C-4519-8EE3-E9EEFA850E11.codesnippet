@@ -10,7 +10,7 @@
 	<string>- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    self = [[[NSBundle mainBundle] loadNibNamed:@"FDSplashView" owner:nil options:nil] objectAtIndex:0];
+    self = [[[NSBundle mainBundle] loadNibNamed:@"&lt;#view#&gt;" owner:nil options:nil] objectAtIndex:0];
     [self setFrame:frame];
     return self;
 }</string>

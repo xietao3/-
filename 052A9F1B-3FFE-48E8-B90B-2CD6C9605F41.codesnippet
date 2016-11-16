@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (copy, nonatomic) &lt;#string#&gt; *&lt;#string#&gt;</string>
+	<string>@property (copy, nonatomic) &lt;#type#&gt; *&lt;#string#&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>052A9F1B-3FFE-48E8-B90B-2CD6C9605F41</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -19,6 +19,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

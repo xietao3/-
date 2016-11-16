@@ -16,7 +16,7 @@
         if (response.code == ResponseCodeSuccess) {
             
         } else if (response.code == ResponseCodeTransctionError) {
-            self.alertMessage = response.msg;
+            weakSelf.alertMessage = response.msg;
         }
     } failure:^(NSError *error) {
         weakSelf.failureMessage = @"果园君小憩一会";
@@ -31,6 +31,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

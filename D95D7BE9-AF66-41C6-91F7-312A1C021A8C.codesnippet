@@ -33,7 +33,7 @@
     NSString *fileName = [fileArray firstObject];
     
     
-    &lt;#__unsafe_unretained Class aClass#&gt; *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    id cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         NSArray *xibs = [[NSBundle mainBundle] loadNibNamed:fileName owner:self options:nil];
         NSUInteger index = 0;
@@ -44,7 +44,7 @@
             }
         }
         cell = [xibs objectAtIndex:index];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        ((UITableViewCell *)cell).selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }
