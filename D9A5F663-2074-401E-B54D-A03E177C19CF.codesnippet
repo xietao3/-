@@ -3,26 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>SystemCell</string>
+	<string>resizeUIButtonBounds</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    static NSString *cellIdentifier = @"cellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
-    }
-    cell.textLabel.text = @"";
-</string>
+	<string>- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event {
+    CGRect bounds =CGRectMake(&lt;#CGFLOAT#&gt;,&lt;#CGFLOAT#&gt;, self.bounds.size.width+&lt;#CGFLOAT#&gt;, self.frame.size.height+&lt;#CGFLOAT#&gt;);
+    return CGRectContainsPoint(bounds, point);
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B73957E7-5351-4829-A202-E9C0E8BD2D7C</string>
+	<string>D9A5F663-2074-401E-B54D-A03E177C19CF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>resizeUIButtonBounds</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SystemCell</string>
+	<string>resizeUIButtonBounds</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>@property copy</string>
+	<string>@copy</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -13,7 +13,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>052A9F1B-3FFE-48E8-B90B-2CD6C9605F41</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>property copy</string>
 	<key>IDECodeSnippetUserSnippet</key>

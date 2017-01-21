@@ -2,18 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>registerCollectionView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) LDUserViewModel *viewModel;</string>
+	<string>    [&lt;#collectionView#&gt; registerNib:[UINib nibWithNibName:&lt;#nibName#&gt; bundle:nil] forCellWithReuseIdentifier:&lt;#cellIdentifier#&gt;];
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>75229C0B-E8F5-421F-BF89-A1C5FB228C14</string>
+	<string>3526D4B5-8898-4D40-B2BF-64813BCB4435</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>registerCollectionView</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Code Snippet</string>
+	<string>registerCollectionView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

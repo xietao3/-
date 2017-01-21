@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>awakeCellFromNib</string>
+	<string>awakeCustomCellFromNib</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>- (void)awakeFromNib {
@@ -50,7 +50,7 @@
 }
 
 - (void)displayCellByDataSources:(id)dataSources rowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (!dataSources) return;
 }
 
 </string>
