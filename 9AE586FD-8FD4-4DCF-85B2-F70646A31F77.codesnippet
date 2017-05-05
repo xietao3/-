@@ -2,27 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>codeshareInstance</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (instancetype)shareInstance {
-    static NetworkAuthManager *shareInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&amp;onceToken, ^{
-        shareInstance = [[NetworkAuthManager alloc] init];
-    });
-    return shareInstance;
-}</string>
+	<string>#if __IPHONE_OS_VERSION_MAX_ALLOWED &gt;= __IPHONE_9_0
+if ([[[UIDevice currentDevice] systemVersion] floatValue] &gt;= 9.0) {
+    [APService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil];
+}
+#else
+NSLog(@"else");
+#endif</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>829921BB-B67D-4743-8614-27085E9AEBE1</string>
+	<string>9AE586FD-8FD4-4DCF-85B2-F70646A31F77</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>shareInstance</string>
+	<string>version</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -9,7 +9,13 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)awakeFromNib {
+	<string>@interface &lt;#class name#&gt; ()
+
+@end
+
+@implementation &lt;#class#&gt;
+
+- (void)awakeFromNib {
     [super awakeFromNib];
 
 }
@@ -53,7 +59,7 @@
     if (!dataSources) return;
 }
 
-</string>
+@end</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>D95D7BE9-AF66-41C6-91F7-312A1C021A8C</string>
 	<key>IDECodeSnippetLanguage</key>

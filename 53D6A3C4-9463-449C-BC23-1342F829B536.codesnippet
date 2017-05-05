@@ -3,26 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>codeshareInstance</string>
+	<string>@weak</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (instancetype)shareInstance {
-    static NetworkAuthManager *shareInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&amp;onceToken, ^{
-        shareInstance = [[NetworkAuthManager alloc] init];
-    });
-    return shareInstance;
-}</string>
+	<string>@property (nonatomic, weak) &lt;#type#&gt; *&lt;#string#&gt;;
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>829921BB-B67D-4743-8614-27085E9AEBE1</string>
+	<string>53D6A3C4-9463-449C-BC23-1342F829B536</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>shareInstance</string>
+	<string>property weak</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

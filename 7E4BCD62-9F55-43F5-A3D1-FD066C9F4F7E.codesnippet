@@ -24,7 +24,9 @@
     [_kvoController observe:self.viewModel keyPath:@"alertMessage" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld block:^(id observer, id object, NSDictionary *change) {
         [weakSelf stopLoading];
         NSString *message = (NSString *)change[NSKeyValueChangeNewKey];
-        [FDUtility alertMessage:message];
+        if (message) {
+            [FDUtility alertMessage:message];
+        }
     }];
 
     

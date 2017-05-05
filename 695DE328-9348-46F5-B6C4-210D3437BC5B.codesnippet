@@ -3,26 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>codeshareInstance</string>
+	<string>dateToString</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (instancetype)shareInstance {
-    static NetworkAuthManager *shareInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&amp;onceToken, ^{
-        shareInstance = [[NetworkAuthManager alloc] init];
-    });
-    return shareInstance;
-}</string>
+	<string>    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *strDate = [dateFormatter stringFromDate:date];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>829921BB-B67D-4743-8614-27085E9AEBE1</string>
+	<string>695DE328-9348-46F5-B6C4-210D3437BC5B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>NSDate to NSString</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>shareInstance</string>
+	<string>dateToString</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
