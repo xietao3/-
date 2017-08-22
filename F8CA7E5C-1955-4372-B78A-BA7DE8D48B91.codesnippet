@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>category bind property</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import &lt;objc/runtime.h&gt;
+
+static const void *ViewControllers = &amp;ViewControllers;
+
+#pragma mark - SET
+- (void)setViewControllers:(NSMutableArray *)viewControllers {
+    objc_setAssociatedObject(self, ViewControllers, viewControllers, OBJC_ASSOCIATION_RETAIN);
+}
+
+#pragma mark - GET
+- (NSMutableArray *)viewControllers {
+    return objc_getAssociatedObject(self, ViewControllers);
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F8CA7E5C-1955-4372-B78A-BA7DE8D48B91</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>bind property</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

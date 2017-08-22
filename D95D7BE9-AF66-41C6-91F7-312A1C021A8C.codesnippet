@@ -20,6 +20,10 @@
 
 }
 
+- (void)initial {
+    
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     
@@ -38,7 +42,6 @@
     NSArray *fileArray = [(NSString *)[(NSArray *)[filePath componentsSeparatedByString:@"/"] lastObject] componentsSeparatedByString:@"."];
     NSString *fileName = [fileArray firstObject];
     
-    
     id cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         NSArray *xibs = [[NSBundle mainBundle] loadNibNamed:fileName owner:self options:nil];
@@ -51,6 +54,9 @@
         }
         cell = [xibs objectAtIndex:index];
         ((UITableViewCell *)cell).selectionStyle = UITableViewCellSelectionStyleNone;
+        if ([cell respondsToSelector:@selector(initial)]) {
+            [cell performSelector:@selector(initial)];
+        }
     }
     return cell;
 }
