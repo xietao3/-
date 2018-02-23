@@ -3,30 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>InitFromXib</string>
+	<string>interface</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    self = [[[NSBundle mainBundle] loadNibNamed:@"&lt;#view#&gt;" owner:nil options:nil] objectAtIndex:0];
-    [self setFrame:frame];
-    [self initial];
-    return self;
-}
+	<string>@interface &lt;#classname#&gt; ()
 
-- (void)initial {
-    
-}</string>
+@end</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8A73BEE3-D59C-4519-8EE3-E9EEFA850E11</string>
+	<string>B7D0A7A2-15B5-4508-A7C0-7C5CA3DE9848</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>interface</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>InitFromXib</string>
+	<string>interface</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

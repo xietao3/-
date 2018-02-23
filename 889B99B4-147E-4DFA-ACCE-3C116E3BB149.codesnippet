@@ -3,30 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>InitFromXib</string>
+	<string>subViews removeFromSuperView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    self = [[[NSBundle mainBundle] loadNibNamed:@"&lt;#view#&gt;" owner:nil options:nil] objectAtIndex:0];
-    [self setFrame:frame];
-    [self initial];
-    return self;
-}
-
-- (void)initial {
-    
-}</string>
+	<string>[[self.cookbookProductView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8A73BEE3-D59C-4519-8EE3-E9EEFA850E11</string>
+	<string>889B99B4-147E-4DFA-ACCE-3C116E3BB149</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>subViews removeFromSuperView</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>InitFromXib</string>
+	<string>subViews removeFromSuperView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

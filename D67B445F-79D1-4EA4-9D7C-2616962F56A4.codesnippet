@@ -3,24 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>implementation</string>
+	<string>MyUILabel</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@implementation &lt;#ClassName#&gt;
-
-@end
-</string>
+	<string>UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, titleLabelTop, viewWidth-40, titleLabelHeight)];
+    titleLabel.font = [UIFont systemFontOfSize:17];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.numberOfLines = 0;
+    titleLabel.text = title;
+    titleLabel.textColor = [UIColor colorWithHexString:@"030303"];
+    [bgView addSubview:titleLabel];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6AD25148-696E-4E4B-B097-49FFCCF77CE9</string>
+	<string>D67B445F-79D1-4EA4-9D7C-2616962F56A4</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>implementation</string>
+	<string>MyUILabel</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>implementation</string>
+	<string>MyUILabel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
