@@ -21,7 +21,7 @@
 }
 
 - (void)initial {
-    
+    [super initial];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -34,34 +34,11 @@
     return &lt;#expression#&gt;;
 }
 
-+ (instancetype)cellForTableView:(UITableView *)tableView{
-    static NSString *cellIdentifier = @"";
-    cellIdentifier = [NSString stringWithFormat:@"%@",NSStringFromClass([self class])];
-    
-    NSString *filePath = [NSString stringWithFormat:@"%s",__FILE__];
-    NSArray *fileArray = [(NSString *)[(NSArray *)[filePath componentsSeparatedByString:@"/"] lastObject] componentsSeparatedByString:@"."];
-    NSString *fileName = [fileArray firstObject];
-    
-    id cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        NSArray *xibs = [[NSBundle mainBundle] loadNibNamed:fileName owner:self options:nil];
-        NSUInteger index = 0;
-        for (id obj in xibs) {
-            if ([NSStringFromClass([obj class]) isEqualToString:NSStringFromClass([self class])]) {
-                index = [xibs indexOfObject:obj];
-                break;
-            }
-        }
-        cell = [xibs objectAtIndex:index];
-        ((UITableViewCell *)cell).selectionStyle = UITableViewCellSelectionStyleNone;
-        if ([cell respondsToSelector:@selector(initial)]) {
-            [cell performSelector:@selector(initial)];
-        }
-    }
-    return cell;
++ (instancetype)cellForTableView:(UITableView *)tableView {
+    return [super cellForTableView:tableView fileName:__FILE__];
 }
 
-- (void)displayCellByDataSources:(id)dataSources rowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)displayCellByDataSources:(id)dataSources rowAtIndexPath:(NSIndexPath *)indexPath {
     if (!dataSources) return;
 }
 
