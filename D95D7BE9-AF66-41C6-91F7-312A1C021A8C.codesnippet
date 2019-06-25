@@ -38,8 +38,8 @@
     return [super cellForTableView:tableView fileName:__FILE__];
 }
 
-- (void)displayCellByDataSources:(id)dataSources rowAtIndexPath:(NSIndexPath *)indexPath {
-    if (!dataSources) return;
+- (void)displayCellByDataSource:(id)dataSource rowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!dataSource) return;
 }
 
 @end</string>
