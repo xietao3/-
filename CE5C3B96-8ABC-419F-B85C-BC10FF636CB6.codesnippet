@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>&lt;#UITableViewCell#&gt; *cell = [&lt;#UITableViewCell#&gt; cellForTableView:tableView];
-[cell displayCellByDataSource:&lt;#(nullable id)#&gt; rowAtIndexPath:indexPath target:self]
+[cell displayCellByDataSource:&lt;#(nullable id)#&gt; rowAtIndexPath:indexPath target:self];
 return cell;
 </string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -24,6 +24,6 @@ return cell;
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
