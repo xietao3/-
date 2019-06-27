@@ -9,19 +9,22 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)getBindProductList {
+	<string>- (void)getSMSVerCodeWithMobile:(NSString *)mobile {
+    if (mobile.length != 11) return;
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjects:@[mobile] forKeys:@[@"mobile"]];
+    
     WS(weakSelf);
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjects:@[content] forKeys:@[@"content"]];
-    [[BaseRequest sharedInstance] request:kAPIDiscoverArticlePublish urlType:RequestBaseUrlTypeDiscover params:parameters imageParams:nil connectIdRequired:YES success:^(BaseResponse *response) {
-        if (response.code == ResponseCodeSuccess) {
-            
-        } else if (response.code == ResponseCodeTransctionError) {
-            weakSelf.alertMessage = response.msg;
+    [[HTTPRequest sharedRequest] taskWithHTTPMethod:HTTPRequestMethodPost URLString:kAPIGetSMSVerCode parameters:parameters responseClass:[KBSessionDataModel class] success:^(KBSessionDataModel *successResponse) {
+        if (successResponse.code == ResponseCodeSuccess) {
+            weakSelf.token = successResponse.token;
+        }else{
+            weakSelf.failureMessage = successResponse.msg;
         }
-    } failure:^(NSError *error) {
-        weakSelf.failureMessage = @"果园君小憩一会";
+    } failure:^(KBBaseDataModel *failureResponse) {
+        weakSelf.failureMessage = kDefaultToastErrorMsg;
     }];
-}</string>
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C0BE3A98-C256-4FA9-8D8F-264E27559E5B</string>
 	<key>IDECodeSnippetLanguage</key>
