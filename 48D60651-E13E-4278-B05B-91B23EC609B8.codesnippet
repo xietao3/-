@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>AssociatedObject</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@property (nonatomic, strong) &lt;#Class#&gt; navigationBar;
+
+static const void *NavigationBar = &amp;NavigationBar;
+
+#pragma mark - setter
+- (void)setNavigationBar:(FDNavigationBar *)navigationBar {
+    objc_setAssociatedObject(self, NavigationBar, navigationBar, OBJC_ASSOCIATION_RETAIN);
+}
+
+#pragma mark - getter
+- (FDNavigationBar *)navigationBar {
+    return objc_getAssociatedObject(self, NavigationBar);
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>48D60651-E13E-4278-B05B-91B23EC609B8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>AssociatedObject</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>AssociatedObject</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
