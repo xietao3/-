@@ -10,15 +10,15 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>- (void)getSMSVerCodeWithMobile:(NSString *)mobile {
-    if (mobile.length != 11) return;
+    if (mobile.length &gt; 0) return;
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjects:@[mobile] forKeys:@[@"mobile"]];
     
     WS(weakSelf);
-    [[HTTPRequest sharedRequest] taskWithHTTPMethod:HTTPRequestMethodPost URLString:kAPIGetSMSVerCode parameters:parameters responseClass:[KBSessionDataModel class] success:^(KBSessionDataModel *successResponse) {
+    [[HTTPRequest sharedRequest] taskWithHTTPMethod:HTTPRequestMethodPost URLString:kAPIGetSMSVerCode parameters:parameters responseClass:[KBBaseDataModel class] success:^(KBBaseDataModel *successResponse) {
         if (successResponse.code == ResponseCodeSuccess) {
             weakSelf.token = successResponse.token;
         }else{
-            weakSelf.failureMessage = successResponse.msg;
+            weakSelf.failureMessage = successResponse.message;
         }
     } failure:^(KBBaseDataModel *failureResponse) {
         weakSelf.failureMessage = kDefaultToastErrorMsg;
