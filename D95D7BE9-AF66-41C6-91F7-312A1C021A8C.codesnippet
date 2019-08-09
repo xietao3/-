@@ -15,11 +15,6 @@
 
 @implementation &lt;#class#&gt;
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-
-}
-
 - (void)initial {
     [super initial];
 }
