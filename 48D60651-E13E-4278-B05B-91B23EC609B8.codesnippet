@@ -11,6 +11,8 @@
 	<key>IDECodeSnippetContents</key>
 	<string>@property (nonatomic, strong) &lt;#Class#&gt; navigationBar;
 
+#import &lt;objc/runtime.h&gt;
+
 static const void *NavigationBar = &amp;NavigationBar;
 
 #pragma mark - setter
