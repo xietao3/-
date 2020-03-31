@@ -3,32 +3,40 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>InitWithXib</string>
+	<string>collectionCell</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    self = [[[NSBundle mainBundle] loadNibNamed:@"&lt;#view#&gt;" owner:nil options:nil] objectAtIndex:0];
-    [self setFrame:frame];
-    [self initial];
-    return self;
+	<string>@interface &lt;#class name#&gt; ()
+
+@end
+
+@implementation &lt;#class#&gt;
+
+-  (void)awakeFromNib {
+    [super awakeFromNib];
 }
 
-- (void)initial {
-    
-}</string>
++ (CGSize)sizeForCellInCollectionView:(nullable UICollectionView *)collectionView rowAtIndexPath:(nullable NSIndexPath *)indexPath dataSource:(nullable id)dataSource {
+    return &lt;#expression#&gt;;
+}
+
+- (void)displayCellByDataSource:(id)dataSource rowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!dataSource) return;
+}
+
+@end
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8A73BEE3-D59C-4519-8EE3-E9EEFA850E11</string>
+	<string>7C1E70DA-36CA-4A6C-B1DD-1D78DA59FC75</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string></string>
+	<string>awakeCollectionCell</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>InitFromXib</string>
+	<string>awakeCollectionCell</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
