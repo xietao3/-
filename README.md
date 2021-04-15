@@ -8,5 +8,5 @@ $ cd /Users/username/Library/Developer/Xcode/UserData/CodeSnippets
 
 ### 2.
 ```
-$ git clone url
+$ git clone https://github.com/xietao3/CodeSnippets.git
 ```
