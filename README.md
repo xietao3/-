@@ -3,7 +3,7 @@
 
 ### 1.
 ```
-$ cd /Users/username/Library/Developer/Xcode/UserData
+$ cd ~/Library/Developer/Xcode/UserData
 ```
 
 ### 2.
